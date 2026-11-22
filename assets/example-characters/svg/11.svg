@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+ <rect x="68" y="61" width="376" height="393" rx="136" fill="#e9ecff"/>
+ <ellipse cx="255" cy="428" rx="120" ry="15" fill="#1f3b54" opacity=".1"/>
+ <path d="M191 346V408M321 346V408" stroke="#626ec2" stroke-width="22" stroke-linecap="round"/>
+ <rect x="156" y="290" width="200" height="112" rx="48" fill="#98a4e7" stroke="#626ec2" stroke-width="9"/>
+ <path d="M256 314 L280 341 L256 369 L232 341Z" fill="#626ec2"/>
+ <path d="M256 135V93" stroke="#626ec2" stroke-width="12" stroke-linecap="round"/><path d="M241 82L256 59L271 82Z" fill="#626ec2"/>
+ <rect x="90" y="207" width="42" height="72" rx="15" fill="#626ec2"/><rect x="380" y="207" width="42" height="72" rx="15" fill="#626ec2"/>
+ <rect x="120" y="136" width="272" height="183" rx="38" fill="#98a4e7" stroke="#626ec2" stroke-width="9"/>
+ <rect x="162" y="189" width="188" height="81" rx="35" fill="#fff" opacity=".64"/>
+ <path d="M184 233L204 216L224 233L204 251Z" fill="#173954"/><path d="M286 233L306 216L326 233L306 251Z" fill="#173954"/>
+ <circle cx="159" cy="266" r="15" fill="#626ec2" opacity=".28"/><circle cx="353" cy="266" r="15" fill="#626ec2" opacity=".28"/>
+ <rect x="239" y="274" width="35" height="11" rx="5" fill="#173954"/>
+ <circle cx="147" cy="181" r="9" fill="#fff" opacity=".48"/>
+ </svg>

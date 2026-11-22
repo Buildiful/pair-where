@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173954">
+  <meta name="description" content="Pair Where? — match the pairs, then sort the cards. A free browser game by Buildiful®.">
+  <meta property="og:title" content="Pair Where? by Buildiful®">
+  <meta property="og:description" content="Match the pairs. Sort the numbers. Beat your best time.">
+  <title>Pair Where? by Buildiful®</title>
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./js/buildiful-analytics.js"
+    data-measurement-id="G-TG14RBXLTF"
+    data-tool-name="Pair Where?"
+    data-privacy-url="./privacy.html"
+    data-events="game_started,tier_two_reached,game_completed"></script>
+  <script defer src="./js/game.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="https://buildiful.com/" aria-label="Buildiful® website">
+          <img src="./assets/buildiful-logo-white.png" alt="Buildiful®" width="174" height="38">
+        </a>
+        <span class="divider" aria-hidden="true"></span>
+        <a class="tool-name" href="https://buildiful.github.io/pair-where/" aria-current="page">Pair Where?</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="game" aria-label="Pair Where? game">
+        <div class="eyebrow-row">
+          <span class="stage-tag" id="stageTag">01 <span aria-hidden="true">/</span> 02</span>
+          <span class="best-time">BEST <strong id="bestTime">—</strong></span>
+        </div>
+        <div class="game-head">
+          <div>
+            <h1 id="stageTitle">Find the pairs.</h1>
+            <p class="game-hint" id="stageHint">Match pairs. Then sort by number.</p>
+          </div>
+          <div class="time-panel" aria-label="Elapsed time">
+            <span class="time-label">TIME</span>
+            <output class="timer" id="timer" aria-label="Elapsed time">00:00.00</output>
+          </div>
+        </div>
+        <div class="progress-row">
+          <span class="progress-label" id="progressLabel">0 / 18 pairs</span>
+          <div class="progress-track" id="progressTrack" role="progressbar" aria-label="Pairs matched" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0">
+            <span class="progress-fill" id="progressFill"></span>
+          </div>
+        </div>
+        <div class="board-shell">
+          <div class="board" id="board" role="group" aria-label="Cards in a six by six grid"></div>
+        </div>
+        <div class="toolbar">
+          <button class="primary-action" id="mainAction" type="button">Start game <span aria-hidden="true">→</span></button>
+          <button class="sound-action" id="soundAction" type="button" aria-pressed="true">
+            <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5l4.5 4V5Z"/><path class="sound-wave" d="M15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/><path class="sound-off" d="m16 9 5 6m0-6-5 6"/></svg>
+            <span id="soundLabel">Sound on</span>
+          </button>
+        </div>
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Built by <a href="https://buildiful.com/">Buildiful®</a></span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://buildiful.github.io/">More Tools</a>
+          <a href="./privacy.html">Privacy</a>
+          <span>v1.0.0</span>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <dialog id="restartDialog" class="game-dialog" aria-labelledby="restartTitle">
+    <h2 id="restartTitle">Start over?</h2>
+    <p>Your current round will end.</p>
+    <div class="dialog-actions">
+      <button type="button" class="dialog-secondary" id="cancelRestart">Keep playing</button>
+      <button type="button" class="dialog-primary" id="confirmRestart">Start over</button>
+    </div>
+  </dialog>
+  <dialog id="completedDialog" class="game-dialog completed-dialog" aria-labelledby="completedTitle">
+    <div class="finish-icon" aria-hidden="true">★</div>
+    <h2 id="completedTitle">All in place!</h2>
+    <p class="finish-caption">Round complete</p>
+    <div class="finish-results">
+      <div><span>YOUR TIME</span><strong id="finalTime">—</strong></div>
+      <div><span>SWAPS</span><strong id="finalSwaps">0</strong></div>
+    </div>
+    <p id="newRecord" class="new-record" hidden>★ New personal best!</p>
+    <button type="button" class="dialog-primary play-again" id="playAgain">Play again <span aria-hidden="true">→</span></button>
+    <button type="button" class="close-finish" id="closeFinish">Close</button>
+  </dialog>
+  <div id="analyticsConsentRoot"></div>
+  <noscript><p class="noscript">Enable JavaScript to play Pair Where?.</p></noscript>
+</body>
+</html>
